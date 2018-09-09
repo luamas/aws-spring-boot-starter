@@ -1,0 +1,30 @@
+{
+  "groups": [
+    {
+      "sourceType": "com.luamas.aws.configuration.AwsProperties",
+      "name": "aws",
+      "type": "com.luamas.aws.configuration.AwsProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.luamas.aws.configuration.AwsProperties",
+      "defaultValue": true,
+      "name": "aws.enable",
+      "description": "enable aws.",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "com.luamas.aws.configuration.AwsProperties",
+      "name": "aws.accessKeyId",
+      "description": "aws access key id.",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.luamas.aws.configuration.AwsProperties",
+      "name": "aws.secretAccessKeyId",
+      "description": "aws secret access key id.",
+      "type": "java.lang.String"
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "hints": [
+    {
+      "name": "aws.s3.region",
+      "values": [
+        {
+          "value": "us-gov-west-1"
+        },
+        {
+          "value": "us-east-1"
+        },
+        {
+          "value": "us-east-2"
+        },
+        {
+          "value": "us-west-1"
+        },
+        {
+          "value": "us-west-2"
+        },
+        {
+          "value": "eu-west-1"
+        },
+        {
+          "value": "eu-west-2"
+        },
+        {
+          "value": "eu-west-3"
+        },
+        {
+          "value": "eu-central-1"
+        },
+        {
+          "value": "ap-south-1"
+        },
+        {
+          "value": "ap-southeast-1"
+        },
+        {
+          "value": "ap-southeast-2"
+        },
+        {
+          "value": "ap-northeast-1"
+        },
+        {
+          "value": "ap-northeast-2"
+        },
+        {
+          "value": "sa-east-1"
+        },
+        {
+          "value": "cn-north-1"
+        },
+        {
+          "value": "cn-northwest-1"
+        },
+        {
+          "value": "ca-central-1"
+        }
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "sourceType": "com.luamas.aws.s3.configuration.AwsS3Properties",
+      "name": "aws.s3",
+      "type": "com.luamas.aws.s3.configuration.AwsS3Properties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.luamas.aws.s3.configuration.AwsS3Properties",
+      "defaultValue": true,
+      "name": "aws.s3.enable",
+      "description": "enable aws s3.",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "com.luamas.aws.s3.configuration.AwsS3Properties",
+      "defaultValue": true,
+      "name": "aws.s3.checkBucketNameExist",
+      "description": "aws s3 check bucket name exist.",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "com.luamas.aws.s3.configuration.AwsS3Properties",
+      "defaultValue": true,
+      "name": "aws.s3.isAws",
+      "description": "minio or aws s3.",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "com.luamas.aws.s3.configuration.AwsS3Properties",
+      "defaultValue": " us-east-1",
+      "name": "aws.s3.region",
+      "description": "aws s3 signing region.",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.luamas.aws.s3.configuration.AwsS3Properties",
+      "name": "aws.s3.bucketName",
+      "description": "aws s3 bucket name.",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.luamas.aws.s3.configuration.AwsS3Properties",
+      "name": "aws.s3.serviceEndpoint",
+      "description": "minio service endpoint.",
+      "type": "java.lang.String"
+    }
+  ]
+}

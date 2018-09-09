@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.luamas.aws.s3.configuration.AwsS3AutoConfiguration

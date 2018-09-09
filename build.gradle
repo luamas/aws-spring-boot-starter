@@ -1,0 +1,61 @@
+ext {
+    gradleScriptDir = "${rootProject.projectDir}/gradle"
+    springFrameworkVersion = '5.0.8.RELEASE'
+    springBootVersion = '2.0.4.RELEASE'
+    awsVersion = '1.11.403'
+
+    POM_PACKAGING='jar'
+    POM_DESCRIPTION='aws-spring-boot-starter'
+    POM_URL="https://git.luamas.com/luamas/aws-spring-boot-starter"
+    POM_SCM_URL='https://git.luamas.com/luamas/aws-spring-boot-starter'
+    POM_SCM_CONNECTION='scm:git:https://git.luamas.com/luamas/aws-spring-boot-starter'
+    POM_SCM_DEV_CONNECTION='scm:git:https://git.luamas.com/luamas/aws-spring-boot-starter'
+    POM_LICENCE_NAME='The Apache License, Version 2.0'
+    POM_LICENCE_URL='http://www.apache.org/licenses/LICENSE-2.0.txt'
+    POM_LICENCE_DIST='repo'
+    POM_DEVELOPER_ID='luamas'
+    POM_DEVELOPER_NAME='luamas'
+    POM_DEVELOPER_EMAIL='myluamas@gmail.com'
+}
+
+
+
+configure(subprojects) { subprojects ->
+    version = '0.0.1-SNAPSHOT'
+    group = 'com.luamas'
+    ext{
+        POM_ARTIFACT_ID = name
+        VERSION_NAME=version
+    }
+    apply plugin: 'java'
+    apply plugin: 'eclipse'
+    apply plugin: 'idea'
+    apply from : "$gradleScriptDir/maven-publish.gradle"
+    jar{
+        manifest{
+            attributes 'Build-Jdk': System.getProperty("java.version")
+            attributes 'Built-By': 'luamas'
+            def date = new Date().format("yyyy-MM-dd")
+            attributes 'Build-Date': date
+            attributes 'Application-Version': project.version
+        }
+    }
+    javadoc {
+        if (JavaVersion.current().isJava9Compatible()) {
+            options.addBooleanOption('html4', true)
+        }
+    }
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven { url "https://repo.spring.io/libs-release" }
+        maven { url "https://repo.spring.io/snapshot" }
+        maven { url "https://repo.spring.io/milestone" }
+    }
+    dependencies{
+        compileOnly('org.projectlombok:lombok:1.18.2')
+        testCompileOnly('org.projectlombok:lombok:1.18.2')
+    }
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+}

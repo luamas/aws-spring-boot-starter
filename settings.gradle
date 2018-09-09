@@ -1,0 +1,6 @@
+rootProject.name = 'aws-spring-boot-starter'
+include 'aws-spring-boot-starter'
+project(":aws-spring-boot-starter").projectDir = file('aws')
+include 'aws-s3-spring-boot-starter'
+project(":aws-s3-spring-boot-starter").projectDir = file('s3')
+
