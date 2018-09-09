@@ -21,7 +21,7 @@ ext {
 
 
 configure(subprojects) { subprojects ->
-    version = '0.0.1-SNAPSHOT'
+    version = '0.0.2-SNAPSHOT'
     group = 'com.luamas'
     ext{
         POM_ARTIFACT_ID = name
