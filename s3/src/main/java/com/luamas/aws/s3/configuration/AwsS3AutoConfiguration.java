@@ -31,7 +31,7 @@ public class AwsS3AutoConfiguration {
         Assert.hasText(awsS3Properties.getServiceEndpoint(),"aws s3 serviceEndpoint not empty");
         Assert.hasText(awsS3Properties.getRegion(),"aws s3 region not empty");
         AmazonS3ClientBuilder amazonS3ClientBuilder = AmazonS3ClientBuilder.standard().withCredentials(awsCredentialsProvider);
-        if (Boolean.TRUE.equals(awsS3Properties.getIsAws())){
+        if (!Boolean.TRUE.equals(awsS3Properties.getIsAws())){
             amazonS3ClientBuilder.withEndpointConfiguration(new AwsClientBuilder.EndpointConfiguration(awsS3Properties.getServiceEndpoint(), awsS3Properties.getRegion()));
         } else {
             amazonS3ClientBuilder.setRegion(awsS3Properties.getRegion());
