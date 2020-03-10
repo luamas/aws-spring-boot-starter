@@ -1,8 +1,8 @@
 ext {
     gradleScriptDir = "${rootProject.projectDir}/gradle"
-    springFrameworkVersion = '5.1.8.RELEASE'
-    springBootVersion = '2.1.6.RELEASE'
-    awsVersion = '1.11.589'
+    springFrameworkVersion = '5.2.3.RELEASE'
+    springBootVersion = '2.2.5.RELEASE'
+    awsVersion = '1.11.734'
 
     POM_PACKAGING='jar'
     POM_DESCRIPTION='aws-spring-boot-starter'
@@ -21,7 +21,7 @@ ext {
 
 
 configure(subprojects) { subprojects ->
-    version = '0.0.3-SNAPSHOT'
+    version = '0.0.4'
     group = 'com.luamas'
     ext{
         POM_ARTIFACT_ID = name
@@ -53,9 +53,14 @@ configure(subprojects) { subprojects ->
         maven { url "https://repo.spring.io/milestone" }
     }
     dependencies{
-        annotationProcessor("org.projectlombok:lombok:1.18.8")
-        compileOnly('org.projectlombok:lombok:1.18.8')
+        annotationProcessor("org.projectlombok:lombok:1.18.12")
+        compileOnly('org.projectlombok:lombok:1.18.12')
     }
     sourceCompatibility = 1.8
     targetCompatibility = 1.8
+}
+
+wrapper{
+    gradleVersion = '6.2.1'
+    distributionType = 'all'
 }
