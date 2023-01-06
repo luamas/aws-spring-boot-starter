@@ -1,6 +1,6 @@
 configure(subprojects) { subprojects ->
     apply plugin: 'java-library'
-    version = '0.0.5-SNAPSHOT'
+    version = '0.0.5'
     group = 'com.luamas'
     ext{
         gradleScriptDir = "${rootProject.projectDir}/gradle"
