@@ -47,7 +47,7 @@ if(hasProperty("sonatypeUsername")) {
                         developer {
                             id = "luamas"
                             name = "luamas"
-                            email = "myluamas@gmail.com"
+                            email = "luamas@163.com"
                         }
                     }
                 }
