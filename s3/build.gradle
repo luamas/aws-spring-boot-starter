@@ -3,9 +3,9 @@ ext{
 }
 
 dependencies {
-    compile(project(":aws-spring-boot-starter"))
-    compile("com.amazonaws:aws-java-sdk-s3:${awsVersion}")
-    compile("org.springframework:spring-context:${springFrameworkVersion}")
-    compile("org.springframework.boot:spring-boot-autoconfigure:${springBootVersion}")
+    api(project(":aws-spring-boot-starter"))
+    api("com.amazonaws:aws-java-sdk-s3:${awsVersion}")
+    api("org.springframework:spring-context:${springFrameworkVersion}")
+    api("org.springframework.boot:spring-boot-autoconfigure:${springBootVersion}")
     compileOnly("org.springframework.boot:spring-boot-configuration-processor:${springBootVersion}")
 }

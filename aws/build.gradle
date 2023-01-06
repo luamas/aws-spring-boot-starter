@@ -2,8 +2,8 @@ ext{
     POM_NAME='aws-spring-boot-starter'
 }
 dependencies {
-    compile("com.amazonaws:aws-java-sdk-core:${awsVersion}")
-    compile("org.springframework:spring-context:${springFrameworkVersion}")
-    compile("org.springframework.boot:spring-boot-autoconfigure:${springBootVersion}")
+    api("com.amazonaws:aws-java-sdk-core:${awsVersion}")
+    api("org.springframework:spring-context:${springFrameworkVersion}")
+    api("org.springframework.boot:spring-boot-autoconfigure:${springBootVersion}")
     compileOnly("org.springframework.boot:spring-boot-configuration-processor:${springBootVersion}")
 }

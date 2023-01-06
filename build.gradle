@@ -1,29 +1,25 @@
-ext {
-    gradleScriptDir = "${rootProject.projectDir}/gradle"
-    springFrameworkVersion = '5.2.3.RELEASE'
-    springBootVersion = '2.2.5.RELEASE'
-    awsVersion = '1.11.734'
-
-    POM_PACKAGING='jar'
-    POM_DESCRIPTION='aws-spring-boot-starter'
-    POM_URL="https://git.luamas.com/luamas/aws-spring-boot-starter"
-    POM_SCM_URL='https://git.luamas.com/luamas/aws-spring-boot-starter'
-    POM_SCM_CONNECTION='scm:git:https://git.luamas.com/luamas/aws-spring-boot-starter'
-    POM_SCM_DEV_CONNECTION='scm:git:https://git.luamas.com/luamas/aws-spring-boot-starter'
-    POM_LICENCE_NAME='The Apache License, Version 2.0'
-    POM_LICENCE_URL='http://www.apache.org/licenses/LICENSE-2.0.txt'
-    POM_LICENCE_DIST='repo'
-    POM_DEVELOPER_ID='luamas'
-    POM_DEVELOPER_NAME='luamas'
-    POM_DEVELOPER_EMAIL='myluamas@gmail.com'
-}
-
-
-
 configure(subprojects) { subprojects ->
-    version = '0.0.4'
+    apply plugin: 'java-library'
+    version = '0.0.5'
     group = 'com.luamas'
     ext{
+        gradleScriptDir = "${rootProject.projectDir}/gradle"
+        springFrameworkVersion = '5.3.24'
+        springBootVersion = '2.7.7'
+        awsVersion = '1.12.379'
+
+        POM_PACKAGING='jar'
+        POM_DESCRIPTION='aws-spring-boot-starter'
+        POM_URL="https://git.luamas.com/luamas/aws-spring-boot-starter"
+        POM_SCM_URL='https://git.luamas.com/luamas/aws-spring-boot-starter'
+        POM_SCM_CONNECTION='scm:git:https://git.luamas.com/luamas/aws-spring-boot-starter'
+        POM_SCM_DEV_CONNECTION='scm:git:https://git.luamas.com/luamas/aws-spring-boot-starter'
+        POM_LICENCE_NAME='The Apache License, Version 2.0'
+        POM_LICENCE_URL='http://www.apache.org/licenses/LICENSE-2.0.txt'
+        POM_LICENCE_DIST='repo'
+        POM_DEVELOPER_ID='luamas'
+        POM_DEVELOPER_NAME='luamas'
+        POM_DEVELOPER_EMAIL='myluamas@gmail.com'
         POM_ARTIFACT_ID = name
         VERSION_NAME=version
     }
@@ -53,14 +49,14 @@ configure(subprojects) { subprojects ->
         maven { url "https://repo.spring.io/milestone" }
     }
     dependencies{
-        annotationProcessor("org.projectlombok:lombok:1.18.12")
-        compileOnly('org.projectlombok:lombok:1.18.12')
+        annotationProcessor("org.projectlombok:lombok:1.18.24")
+        compileOnly('org.projectlombok:lombok:1.18.24')
     }
     sourceCompatibility = 1.8
     targetCompatibility = 1.8
 }
 
 wrapper{
-    gradleVersion = '6.2.1'
+    gradleVersion = '7.6'
     distributionType = 'all'
 }
